@@ -13,17 +13,19 @@ def simulate(startingCreatures, generationsMax):
     #run the simulation loop
     while len(allCreatures) > 0 and simulateTime < generationsMax:
         print('tick ', simulateTime)
+        newCreatures = []
         cleanup = []
         #creatures do their live function
         for creature in allCreatures:
             print(creature)
-            creature.live()
+            creature.live(newCreatures)
             if creature.dead:
                 cleanup.append(creature)
         #remove outside of live loop
         for creature in cleanup:
             allCreatures.remove(creature)    
-        
+        allCreatures.extend(newCreatures)
+
         simulateTime += 1
     
     #display    
@@ -32,4 +34,4 @@ def simulate(startingCreatures, generationsMax):
         print(creature)
 
 if __name__ == '__main__':
-    simulate(10, 9)
+    simulate(1, 2)
