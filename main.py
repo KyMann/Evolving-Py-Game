@@ -8,7 +8,7 @@ def simulate(startingCreatures, generationsMax):
 
     #make initail creatures
     for i in range(startingCreatures):
-        allCreatures.append(Creature.creature(parent=''))
+        allCreatures.append(Creature.Creature(parent=''))
 
     #run the simulation loop
     while len(allCreatures) > 0 and simulateTime < generationsMax:
@@ -34,4 +34,4 @@ def simulate(startingCreatures, generationsMax):
         print(creature)
 
 if __name__ == '__main__':
-    simulate(1, 2)
+    simulate(1, 3)
