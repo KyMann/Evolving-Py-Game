@@ -1,0 +1,8 @@
+#--------logic requirements --------
+numpy
+
+#---------graphical requirements ---------
+
+#-------built ins here---------
+#random
+#string
