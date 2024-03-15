@@ -14,6 +14,9 @@ class Creature:
             self.name = ''.join(random.choice(string.ascii_lowercase))
             self.reproduceRate = 1
             self.mutations = []
+            self.color = (39,125,19)
+            self.pos = (500, 500)
+            self.size = 20
         else:
             self.dead = False
             self.EnergyMax = parent.EnergyMax
@@ -23,6 +26,9 @@ class Creature:
             self.name = parent.name+''.join(random.choice(string.ascii_lowercase))
             self.reproduceRate = parent.reproduceRate
             self.mutations = parent.mutations
+            self.color = parent.color
+            self.pos = parent.pos
+            self.size = parent.size
         self.age = 0
         
 

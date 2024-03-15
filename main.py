@@ -1,5 +1,6 @@
 import random
 import Creature
+import window
 
 
 def simulate(startingCreatures, generationsMax):
